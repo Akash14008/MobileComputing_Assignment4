@@ -7,7 +7,10 @@ import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.AlphaAnimation;
+import android.view.animation.Animation;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import java.util.UUID;
 
@@ -17,6 +20,7 @@ public class TodoFragment extends Fragment {
     private Todo mTodo;
     private EditText mTitleField;
     private EditText mDetailsField;
+    private TextView myText;
 
     public static TodoFragment newInstance(UUID todoId) {
         Bundle args = new Bundle();
@@ -74,6 +78,15 @@ public class TodoFragment extends Fragment {
 
             }
         });
+
+        myText = (TextView) v.findViewById(R.id.blinkText);
+
+        Animation anim = new AlphaAnimation(0.0f, 1.0f);
+        anim.setDuration(50); //You can manage the blinking time with this parameter
+        anim.setStartOffset(20);
+        anim.setRepeatMode(Animation.REVERSE);
+        anim.setRepeatCount(Animation.INFINITE);
+        myText.startAnimation(anim);
 
         return v;
     }

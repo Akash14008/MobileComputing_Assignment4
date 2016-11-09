@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Assignment_4</string>
+    <string name="app_name">To Do App</string>
     <string name="todo_title_hint">Enter a title for the todo.</string>
     <string name="todo_title_label">Title</string>
     <string name="todo_details_label">Details</string>

@@ -9,11 +9,16 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textStyle="bold"
-        android:textSize="20sp"
+        android:textAlignment="gravity"
+        android:textSize="25sp"
         android:textColor="#aa0000"
         tools:text="Todo Title"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
+        android:typeface="serif"
         android:padding="4dp"/>
+
+    <View style="@style/Divider"
+        android:layout_below="@id/list_item_todo_title_text_view"/>
 
 </RelativeLayout>
